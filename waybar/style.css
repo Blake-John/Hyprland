@@ -1,0 +1,157 @@
+/* 全局设置 */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0;
+}
+
+/* 默认状态栏背景及主体颜色 */
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #2b2b2c;
+}
+
+/* 提示框的设置 */
+tooltip {
+    background: #e7e7ec;
+    opacity: 0.8;
+    border-radius: 10px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #424c50;
+}
+tooltip label{
+    color: #2b2b2c;
+}
+
+/* workspace按钮设置 */
+#workspaces button {
+    padding: 5px;
+    color: #313244;
+    margin-right: 5px;
+    /* padding: 0px; */
+}
+#workspaces button.active {
+    color: #dbe2f7;
+    background: #21a675;
+    border-radius: 20px;
+}
+#workspaces button:hover {
+    background: #48c0a3;
+    color: #cdd6f4;
+    border-radius: 20px;
+}
+
+/* 所有模块的基本设置 */
+#custom-launch_tofi,
+#workspaces,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#window,
+#custom-lock_screen,
+#custom-updates,
+#clock,
+#custom-power_btn,
+#tray,
+#network,
+#bluetooth,
+#battery,
+#custom-power_profile,
+#pulseaudio,
+#custom-weather,
+#custom-myhyprv,
+#custom-light_dark,
+#backlight {
+    background: #e7e7ec;
+    opacity: 0.8;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 10px;
+    border: 0px;
+}
+
+/* 单组模块的特别设置 */
+
+/* tofi及工作区 */
+#custom-launch_tofi {
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 10px;
+    color: #177cb0;
+}
+#workspaces {
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
+
+/* 硬件信息 */
+#cpu {
+    border-radius: 10px 0px 0px 10px;
+}
+#temperature {
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
+
+/* 当前窗口 */
+#window {
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* 打开的软件 */
+#tray {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+/* 电池，屏幕和声音 */
+#battery {
+    border-radius: 10px 0px 0px 10px;
+    color: #1d7715;
+}
+#battery.warning {
+    color: #ffa631;
+}
+#battery.critical {
+    color: #f20c00;
+}
+#pulseaudio {
+    color: #407cdd;
+}
+#pulseaudio.microphone {
+    color: #ad6bfd;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
+
+/* 天气及剩余模块 */
+#custom-weather {
+    border-radius: 10px 0px 0px 10px;
+}
+
+/* 时钟 */
+#clock {
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
+
+
+/* #custom-light_dark {
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+} */
+
+/* 锁屏及关机 */
+#custom-lock_screen {
+    border-radius: 10px 0px 0px 10px;
+}
+#custom-power_btn {
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
