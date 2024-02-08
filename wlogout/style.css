@@ -1,0 +1,49 @@
+* {
+	background-image: none;
+}
+window {
+	background-color: #383838;
+	opacity: 0.9;
+}
+button {
+    color: #0f2137;
+	font-size: 16px;
+	background-color: #383838;
+	border-style: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 35%;
+	border-radius: 30px;
+	margin: 20px 10px;
+	text-shadow: 0px 0px;
+	box-shadow: 0px 0px;
+}
+
+button:focus, button:active, button:hover {
+	background-color: #e7e7ec;
+	outline-style: none;
+}
+
+#lock {
+    background-image: image(url("/home/blake/.config/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/home/blake/.config/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/blake/.config/wlogout/icons/sleep.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("/home/blake/.config/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("/home/blake/.config/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/blake/.config/wlogout/icons/reboot.png"));
+}
