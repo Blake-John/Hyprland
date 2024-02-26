@@ -19,6 +19,7 @@ This is the repository storing the config files of hyprland settings **based on*
 ## 02 Packages
 ### 2.1 Body
 #### 1. `Hyprland`
+
 ```bash
 yay -S hyprland
 ```
