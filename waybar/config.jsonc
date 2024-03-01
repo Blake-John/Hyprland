@@ -92,7 +92,8 @@
         "format": "",
         "tooltip": false,
         "tooltip-format": "Launch Applications",
-        "on-click": "tofi-drun --drun-launch=true"
+        // "on-click": "tofi-drun --drun-launch=true"
+        "on-click": "sh -c '(sleep 0.1s; pkill wofi || wofi -c ~/.config/wofi/config-lmenu)' & disown"
     },
 
     // the config of the workspaces module
@@ -145,7 +146,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     
     // the config of the focusing window
@@ -179,8 +180,8 @@
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
         "on-scroll-up": "~/.config/waybar/scripts/brightness --inc",
-        "on-scroll-down": "~/.config/waybar/scripts/brightness --dec",
-        "min-length": 6
+        "on-scroll-down": "~/.config/waybar/scripts/brightness --dec"
+        // "min-length": 6
     },
 
     // the audio
