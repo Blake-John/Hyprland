@@ -1,0 +1,239 @@
+/* ---- Configuration ---- */
+configuration {
+	modes: "window,drun,run,ssh";
+	show-icons: true;
+	display-drun:	" ";
+	display-run:	" ";
+	display-filebrowser:	" ";
+	display-window:	" ";
+	display-calc: " Input";
+
+	timeout {
+		action: "kb-cancel";
+		delay:  0;
+	}
+
+	filebrowser {
+		directories-first: true;
+		sorting-method:    "name";
+	}
+}
+
+@import "../shared/colors.rasi"
+@import "../shared/fonts.rasi"
+
+/* ---- Window ---- */
+window {
+	enabled:			true;
+	fullscreen:			false;
+	transparency:		"real";
+	cursor:				"default";
+	spacing:			0px;
+	border:				2px;
+	border-radius:		10px;
+	border-color:		@main-color;
+	location:			center;
+	anchor:				center;
+
+	// Style
+	width:				700px;
+	// background-color: #00000088;
+	// background-color:	#d3e0f3;
+	// background-color:	#88ada6;
+	// background-color:	#d2f0f4ee;
+	// background-color:	#f3f9f1ee;
+	// background-color:	#ffffff;
+	background-color:	@main-bg;
+}
+
+/* ---- Main Box ---- */
+mainbox {
+	enabled:			true;
+	orientation:		vertical;
+	children:			[ "inputbar", "listbox" ];
+	background-color: 	transparent;
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+	enabled:			true;
+	// padding:			80px 60px;
+	// padding:			15px 10px;
+	padding:			10px;
+	spacing:			10px;
+	margin:				20px 20px 0px 20px;
+	// background-color: 	transparent;
+	background-color:	#f2fdff;
+	border-radius:		10px;
+	orientation:		horizontal;
+	// children:			[  "mode-switcher", "entry" ];
+	children:			[  "prompt", "textbox-prompt-colon", "entry" ];
+	// background-image: 	url("~/.config/wallpapers/space.png", width);
+	background-color:	@main-bg-alt;
+	text-color:			@main-fg;
+}
+
+prompt {
+	background-color:	transparent;
+	text-color:			inherit;
+
+}
+
+textbox-prompt-colon {
+	enabled:			true;
+	expand:				false;
+	str:				"::";
+	background-color:	transparent;
+	text-color:			inherit;
+}
+
+/* ---- Entry input ---- */
+entry {
+	enabled:			true;
+	expand:				false;
+	width:				500px;
+	margin:				0px 0px 0px 20px;
+	padding:			0px 0px;
+	// border-radius:		10px;
+	text-color:			inherit;
+	background-color:	#ffffff;
+	background-color:	#f3f9f1ee;
+	background-color:	#ffffff;
+	background-color:	#f2fdff;
+	background-color:	transparent;
+	cursor:				text;
+	placeholder:		"";
+	placeholder-color:	inherit;
+}
+
+/* ---- Listbox ----*/
+listbox {
+	spacing:			20px;
+	padding:			20px;
+	background-color:	transparent;
+	orientation:		vertical;
+	children:			[ "message", "listview" ];
+}
+
+/* ---- Listview ---- */
+listview {
+	enabled:			true;
+	columns:			2;
+	lines:				8;
+	cycle:				true;
+	dynamic:			true;
+	scrollbar:			false;
+	layout:				vertical;
+	reverse:			false;
+	fixed-height:		true;
+	fixed-columns:		true;
+
+	spacing:			10px;
+	background-color:	transparent;
+
+	border:				0px;
+}
+
+/* ---- Dummy ---- */
+dummy {
+	expand:				true;
+	background-color:	transparent;
+}
+
+/* ---- Mode Switcher ---- */
+mode-switcher {
+	enabled:			true;
+	spacing:			10px;
+	background-color:	transparent;
+}
+button {
+	width:				80px;
+	padding:			12px;
+	border-radius:		10px;
+	text-color:			#00000088;
+	cursor:				pointer;
+}
+button selected {
+	background-color:	#ffffffee;
+	background-color:	#f2fdff;
+	text-color:			#000000;
+	
+}
+
+/* ---- Elements ---- */
+element {
+	enabled:			true;
+	spacing:			10px;
+	padding:			4px;
+	border-radius:		10px;
+	cursor:				pointer;
+}
+
+element normal.normal {
+	background-color:	inherit;
+	text-color:			#00000088;
+	text-color:			@main-fg-alt;
+}
+
+element normal.active {
+	// background-color:
+	text-color:			#00000088;
+	text-color:			@main-fg-alt;
+}
+
+element selected.normal {
+	text-color:					@main-fg;
+	background-color:			#f3f9f1ee;
+	background-color:			#ffffff;
+	background-color:			#f2fdff;
+	background-color:			@main-color;
+	padding:					15px 8px;
+	highlight:					bold;
+	margin:						10px;
+}
+// Adapt rofi theme
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  #00000088;
+	text-color:			@main-fg-alt;
+}
+element alternate.urgent {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element alternate.active {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        36px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+
+}
+
+/* ---- Message ---- */
+message {
+    background-color:            transparent;
+    border:                      0px;
+}
+textbox {
+    padding:                     12px;
+    border-radius:               10px;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+	background-color:			transparent;
+	text-color:					@main-fg;
+}
+error-message {
+    padding:                     12px;
+    border-radius:               20px;
+}

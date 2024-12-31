@@ -1,0 +1,93 @@
+# the aur helper
+yay
+
+# the main body of hyprland
+hyprland-git
+waybar
+rofi-lbonn-wayland
+
+# the terminal
+fish
+starship
+kitty
+
+# the files
+nautilus
+dolphin
+ark
+ntfs-3g
+
+# the multimedias
+feh
+vlc
+qmmp
+
+# clipboard
+wl-clipboard
+cliphist
+
+# policy
+# polkit-kde-agent
+hyprpolkitagent
+
+# devices
+brightnessctl
+bluez
+bluez-utils
+pipewire
+wireplumber
+pamixer
+pavucontrol
+networkmanager
+xorg-xrdb
+neofetch
+btop
+power-profiles-daemon
+
+# input
+fcitx5
+fcitx5-chinese-addons
+fcitx5-configtool
+fcitx5-input-support
+wqy-zenhei
+nerd-fonts
+noto-fonts
+noto-fonts-emoji
+
+# system support
+xdg-desktop-portal-hyprland
+hyprutils
+hyprgraphics
+hyprland-qtutils
+qt5-wayland
+qt6-wayland
+
+# dm
+sddm
+
+# additional
+ranger
+zip
+unzip
+7-zip
+nvim
+vim
+zathura
+zathura-pdf-poppler
+visual-studio-code-bin
+musikcube
+calc
+hyprpicker
+hyprlock
+hyprsunset
+swww
+grimblast
+swappy
+atool
+less
+highlight
+python-pillow
+ffmpegthumbnailer
+catdoc
+docx2txt
+rofi-calc-git

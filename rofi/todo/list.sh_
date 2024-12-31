@@ -1,0 +1,45 @@
+#!/bin/bash
+
+TODO_FILE="$HOME/Desktop/Nutstore/学无止境/00 Todo.md"
+DONE_FILE="$HOME/Desktop/Nutstore/学无止境/00 Done.md"
+
+if [[ ! -a "$TODO_FILE" ]]; then
+    touch "$TODO_FILE"
+fi
+
+if [[ ! -a $DONE_FILE ]]; then
+	touch $DONE_FILE
+fi
+
+function add_todo() {
+    # echo -e "`date +"%b %d %H:%M"` | $*" >> "${TODO_FILE}"
+	ADD=$(echo $* | sed s/\+//g)
+	echo "- [ ] $ADD" >> "$TODO_FILE"
+}
+
+function remove_todo() {
+	LINE_GREP=$(echo $* | sed s/\\-/\\\\-/g | sed "s/\\[ \\]/\\\\[ \\\\]/g")
+	LINE_DONE=$(echo $* | sed "s/\\- \\[ \\] //g")
+	MATCH=$(grep "$LINE_GREP" "$TODO_FILE")
+	if [[ -n "$MATCH" ]]; then
+		echo "- [x] $LINE_DONE" >> "$DONE_FILE"
+		sed -i "/$LINE_GREP/d" "$TODO_FILE"
+	fi
+}
+
+function get_todos() {
+    echo "Refresh List"
+    echo "$(cat "$TODO_FILE")"
+}
+
+if [[ -z $* ]]; then
+    get_todos
+else
+    LINE_UNESCAPED=$*
+    if [[ $LINE_UNESCAPED == +* ]]; then
+        add_todo $LINE_UNESCAPED
+    else
+		remove_todo $LINE_UNESCAPED
+    fi
+    get_todos
+fi

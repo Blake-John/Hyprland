@@ -1,0 +1,250 @@
+@define-color cc-bg rgba(242, 245, 242, 0.9);
+@define-color text-color #272c2a;
+
+@define-color noti-border-color rgba(255, 255, 255, 0.15);
+@define-color noti-border-hover rgba(240, 238, 233, 0.9);
+
+@define-color noti-border-critical #bf616a;
+@define-color noti-border-normal #99c0d0;
+
+@define-color noti-bg rgba(240, 238, 233, 0.7);
+@define-color noti-bg-hover rgba(240, 238, 233, 0.9);
+
+@define-color noti-close-bg rgba(255, 255, 255, 0.1);
+@define-color noti-close-bg-hover rgba(18, 20, 25, 0.35);
+@define-color noti-close-fg-hover rgba(255, 255, 255, 0.9);
+
+
+.control-center {
+	/* The Control Center which contains the old notifications + widgets */
+	background: @cc-bg;
+	color: @text-color;
+	border-radius: 10px;
+	box-shadow: none;
+}
+
+.control-center .control-center-list-placeholder {
+	/* The placeholder when there are no notifications */
+	opacity: 0.5;
+}
+
+.control-center .control-center-list {
+  /* List of notifications */
+	box-shadow: none;
+	outline: none;
+	/* background: @noti-bg; */
+  background: transparent;
+  /* background: #ff0000; */
+}
+
+.control-center .control-center-list .notification {
+	box-shadow: none;
+	outline: none;
+	background: @noti-bg;
+}
+
+.control-center .control-center-list .notification .notification-default-action,
+.control-center .control-center-list .notification .notification-action {
+	transition: opacity 400ms ease-in-out, background 0.15s ease-in-out;
+	box-shadow: none;
+	outline: none;
+	background: @noti-bg;
+}
+
+.control-center .control-center-list .notification .notification-default-action:hover,
+.control-center .control-center-list .notification .notification-action:hover {
+  /*background-color: @noti-bg-hover;*/
+}
+
+.notification-group {
+  /* Styling only for Grouped Notifications */
+	/* background: @noti-bg; */
+  background: #fff000;
+}
+
+.notification-group.low {
+  /* Low Priority Group */
+}
+
+.notification-group.normal {
+  /* Low Priority Group */
+}
+
+.notification-group.critical {
+  /* Low Priority Group */
+}
+
+.notification-group .notification-group-buttons, .notification-group .notification-group-headers {
+  margin: 0 16px;
+  color: @text-color;
+  background: #ff0000;
+  box-shadow: none;
+}
+
+.notification-group .notification-group-headers {
+  /* Notification Group Headers */
+}
+
+.notification-group .notification-group-headers .notification-group-icon {
+  color: @text-color;
+}
+
+.notification-group .notification-group-headers .notification-group-header {
+  color: @text-color;
+  background: @noti-bg;
+}
+
+.notification-group .notification-group-buttons {
+  /* Notification Group Buttons */
+	background: @noti-bg;
+  box-shadow: none;
+	border: none;
+}
+
+.notification-group.collapsed .notification-row .notification {
+  background-color: @noti-bg;
+  outline: none;
+  box-shadow: none;
+  /* background: @cc-bg; */
+  /* background: #00ff00; */
+}
+
+.notification-group.collapsed .notification-row:not(:last-child) {
+  /* Top notification in stack */
+  /* Set lower stacked notifications opacity to 0 */
+}
+
+.notification-group.collapsed .notification-row:not(:last-child) .notification-action,
+.notification-group.collapsed .notification-row:not(:last-child) .notification-default-action {
+  opacity: 0;
+  background:	@noti-bg;
+}
+
+.notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
+  background-color: @noti-bg-hover;
+}
+
+
+.blank-window {
+  /* Window behind control center and on all other monitors */
+  /* background: transparent; */
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+.floating-notifications .notification {
+  box-shadow: none;
+}
+
+/*** Widgets ***/
+/* Label widget */
+.widget-label {
+	margin: 10px 100px;
+}
+.widget-label > label {
+	font-size: 1.5rem;
+}
+
+/* Volume widget */
+.widget-volume {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  margin: 8px;
+  border-radius: 10px;
+  color:	@text-color;
+}
+
+.widget-volume > box > button {
+  background: @cc-bg;
+  border: none;
+  border-radius:	3px;
+  box-shadow: 0 0 0 rgba (0, 0, 0, 0);
+}
+.widget-volume > box > button:hover {
+	background: rgb(242, 245, 242);
+}
+
+.per-app-volume {
+  background: rgb(242, 245, 242);
+  padding: 4px 8px 8px 8px;
+  margin: 0px 8px 8px 8px;
+  border-radius: 12px;
+}
+
+/* Backlight */
+.widget-backlight {
+	background: rgba(255, 255, 255, 0.9);
+	padding: 8px;
+	margin: 8px;
+	border-radius: 10px;
+}
+
+/* DND widget */
+.widget-dnd {
+  color: @text-color;
+  padding: 10px;
+  margin: 8px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+.widget-dnd > switch {
+  font-size: initial;
+  background: rgba(242, 245, 242, 0.9);
+  /*border-color: rgb(200, 200, 200);*/
+  border-radius: 12px;
+  border: 1px solid @noti-border-color;
+  box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+	background: #95cfec;
+}
+
+.widget-dnd > switch slider {
+	background: rgb(245, 245, 245);
+	box-shadow: none;
+	font-size: 10px;
+}
+
+/* Title widget */
+.widget-title {
+  color: @text-color;
+  margin: 8px;
+  font-size: 1.5rem;
+}
+
+.widget-title > button {
+  font-size: initial;
+  color: @text-color;
+  text-shadow: none;
+  background: @cc-bg;
+  border: 1px solid @noti-border-color;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+.widget-title > button:hover {
+  background: rgb(255, 255, 255);
+}
+
+
+/* Buttons widget */
+.widget-buttons-grid {
+  padding: 8px;
+  margin: 8px;
+  border-radius: 12px;
+  background-color: @noti-bg;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: @noti-bg;
+  border-radius: 12px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
+  /* style given to the active toggle button */
+}

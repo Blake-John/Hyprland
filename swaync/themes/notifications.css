@@ -1,0 +1,97 @@
+@define-color text-color      #272c2a;
+
+@define-color noti-border-color rgba(255, 255, 255, 0.15);
+@define-color noti-border-hover rgba(255, 255, 255, 0.9);
+
+@define-color noti-bg rgba(240, 238, 233, 0.7);
+@define-color noti-bg-hover rgba(240, 238, 233, 0.9);
+
+@define-color noti-border-critical #bf616a;
+@define-color noti-border-normal #99c0d0;
+
+@define-color noti-close-bg rgba(255, 255, 255, 0.1);
+@define-color noti-close-bg-hover rgba(18, 20, 25, 0.35);
+@define-color noti-close-fg-hover rgba(255, 255, 255, 0.9);
+
+
+* {
+	color:	@text-color;
+	font-size: 14px;
+	font-family: "JetBrains Mono Nerd Font 10";
+	transition: 200ms;
+
+}
+
+.notification-row {
+	outline: none;
+	margin: 0;
+	padding: 10px;
+	border-color: @noti-border-color;
+	background-color: transparent;
+
+}
+
+.notification-row:focus, .notification-row:hover {
+	/* Notifucation when hovering */
+	/* background: @noti-bg-hover; */
+	border-color: @noti-border-hover;
+}
+
+.notification-row .notification-background .notification {
+	/* The actual notification */
+	border-radius: 10px;
+	border: 2px solid @noti-border-color;
+	/* padding: 10px; */
+	transition: background 0.15s ease-in-out;
+	background: @noti-bg;
+}
+
+.notification-row .notification-background .close-button {
+  /* The notification Close Button */
+  background: @noti-close-bg;
+  color: @text-color;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.notification-row .notification-background .close-button:hover { 
+	box-shadow: none;
+	background: rgb(250, 250, 250);
+	color: @noti-close-fg-hover;
+	transition: background 0.15s ease-in-out;
+	border: none;
+}
+
+.notification-row .notification-background .notification.low {
+	/* Low Priority Notification */
+}
+
+.notification-row .notification-background .notification.normal {
+	/* Normal Priority Notification */
+	border-color: @noti-border-normal;
+}
+
+.notification-row .notification-background .notification.critical {
+	/* Critical Priority Notification */
+	border-color: @noti-border-critical;
+}
+
+.image {
+	margin: 10px 20px 10px 0px;
+}
+
+.summary {
+	font-weight: 800;
+	font-size: 1rem;
+}
+
+.body {
+	font-size: 0.8rem;
+}

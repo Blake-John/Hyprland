@@ -1,0 +1,17 @@
+/**
+ *
+ * Author : Levi Lacoss (fishyfishfish55)
+ * Github : @fishyfishfish55
+ *
+ * Colors
+ **/
+
+* {
+    main-bg:     #15161E;
+    main-bg-alt: #282b31;
+    main-fg:     #FFFFFF;
+	main-fg-alt:	#C0CAF5;
+    main-color:	    #996A6777;
+    active:         #414868;
+    urgent:         #F7768E;
+}

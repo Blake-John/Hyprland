@@ -1,0 +1,283 @@
+{
+	// the config of the app-launch icon
+    "custom/launch_app": {
+        "tooltip": false,
+        "tooltip-format": "Launch Apps",
+		"format": " ",
+        // "on-click": "tofi-drun --drun-launch=true"
+        "on-click": "sh -c '(sleep 0.1s; pkill rofi || rofi -show drun)'"
+    },
+
+    // the config of the workspaces module
+    "hyprland/workspaces": {
+		"show-special": true,
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        // set to show 5 workspacces persistently
+        // "persistent-workspaces": {
+        //     "1": [],
+        //     "2": [],
+        //     "3": [],
+        //     "4": [],
+        //     "5": []
+        //     //"6": [],
+        //     //"7": [],
+        //     //"8": [],
+        //     //"9": [],
+        //     //"10": []
+        // }
+		"format": "{icon}",
+		"format-icons": {
+			// "1": "",
+			// "2": "",
+			// "3": "",
+			// "4": "",
+			// "5": "",
+			// "urgent": "",
+			// "focused": "",
+			// "default": ""
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"0": "0",
+			"special": ""
+		}
+    },
+
+    // configure the hardware
+    "cpu": {
+        "interval": 10,
+        "format": " {usage}%",
+        "max-length": 10,
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "Memory - {used:0.1f}GB used",
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "tooltip": true,
+        "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": " {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", "", ""],
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+    
+    
+    // the config of the application shown on waybar
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    // the battery
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": " ",
+			"power-saver": ""
+		}
+	},
+
+    // the backlight
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-up": "~/.config/waybar/scripts/brightness --dec",
+        "on-scroll-down": "~/.config/waybar/scripts/brightness --inc"
+        // "min-length": 6
+    },
+
+    // the audio
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " ",
+		"format-bluetooth": "󰂰 ",
+        "on-click": "~/.config/waybar/scripts/volume --toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/waybar/scripts/volume --dec",
+        "on-scroll-down": "~/.config/waybar/scripts/volume --inc",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": ["", "", " "]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " ",
+        "on-click": "~/.config/waybar/scripts/volume --toggle-mic",
+        "on-click-right": "pavucontrol",
+        "on-scroll-down": "~/.config/waybar/scripts/volume --mic-inc",
+        "on-scroll-up": "~/.config/waybar/scripts/volume --mic-dec",
+        "scroll-step": 5
+    },
+
+
+    // the config of the clock
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{calendar}</big>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+	"custom/notification": {
+		"tooltip": true,
+		"tooltip-format": "Notification Center",
+		"format": "{icon}",
+		"format-icons": {
+			/* "notification": " <span foreground='red'><sup></sup></span>",
+			"none": " ",
+			"dnd-notification": " <span foreground='red'><sup></sup></span>",
+			"dnd-none": " ",
+			"inhibited-notification": " <span foreground='red'><sup></sup></span>",
+			"inhibited-none": " ",
+			"dnd-inhibited-notification": " <span foreground='red'><sup></sup></span>",
+			"dnd-inhibited-none": " ", */
+			"notification": " <sup></sup>",
+			"none": " ",
+			"dnd-notification": " <sup></sup>",
+			"dnd-none": " ",
+			"inhibited-notification": " <sup></sup>",
+			"inhibited-none": " ",
+			"dnd-inhibited-notification": " <sup></sup>",
+			"dnd-inhibited-none": " "
+		},
+
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
+
+	"group/group-power": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 500,
+			"child-class": "not-power",
+			"transition-left-to-right": false
+		},
+		"modules": [
+			"custom/power_btn",
+			"custom/logout",
+			"custom/reboot"
+		]
+	},
+
+    // lock the screen
+    "custom/lock_screen": {
+        "format": "",
+        "on-click": "hyprlock",
+        "tooltip": false
+    },
+
+	"custom/reboot": {
+		"format": "",
+		"on-click": "reboot",
+		"tooltip-format": "Reboot the System"
+	},
+
+    // the power button
+    "custom/power_btn": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.1s; ~/.config/rofi/powermenu/powermenu.sh)' & disown",
+        "tooltip": false
+    },
+	"custom/logout": {
+		"format": "󰗼",
+		"on-click": "hyprctl dispatch exit"
+	},
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        // "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ifname} {ipaddr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+		"on-click-right": "python ~/.config/rofi/network/network.py"
+    },
+
+	"bluetooth": {
+		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+		"format": "󰂯",
+		"format-off": "󰂲",
+		"format-connected": " {num_connections} connected",
+		"tooltip-format": "{controller_alias}\t{controller_address}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"on-click-right": "~/.config/rofi/bluetooth/bluetooth.sh"
+	}
+	
+	// "bluetooth": {
+	//     "format": " {status}",
+	//     "format-disabled": "", // an empty format will hide the module
+	//     "format-connected": " {num_connections}",
+	//     "tooltip-format": "{device_alias}",
+	//     "tooltip-format-connected": " {device_enumerate}",
+	//     "tooltip-format-enumerate-connected": "{device_alias}"
+    // }
+    
+    // "custom/media": {
+    //     "format": "{icon} {}",
+    //     "return-type": "json",
+    //     "max-length": 40,
+    //     "format-icons": {
+    //         "spotify": " ",
+    //         "default": "🎜 "
+    //     },
+    //     "escape": true,
+    //     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+    //     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    // }
+}
+

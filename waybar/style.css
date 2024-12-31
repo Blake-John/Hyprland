@@ -1,0 +1,210 @@
+@import "color.css";
+
+/* 全局设置 */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+/* 默认状态栏背景及主体颜色 */
+window#waybar {
+    /*background: rgba(21, 18, 27, 0);*/
+	background: transparent;
+    /*color: #2b2b2c;*/
+	color:	@main-fg;
+}
+
+/* 提示框的设置 */
+tooltip {
+    background: @main-bg;
+    opacity: 0.8;
+    border-radius: 10px;
+    border-width: 1.5px;
+    border-style: solid;
+    /*border-color: #424c50;*/
+	border-color: @main-border;
+}
+tooltip label{
+    /*color: #2b2b2c;*/
+	color:	@main-fg;
+}
+
+/* workspace按钮设置 */
+#workspaces button {
+	padding: 1px 5px 1px 5px;
+    /*color: #313244;*/
+	color: @main-fg;
+    margin: 0px 1px;
+    /* padding: 0px; */
+}
+#workspaces button.active {
+    /*color: #dbe2f7;*/
+	/*color: #313244;*/
+	color: @main-fg;
+    /*background: #21a675;*/
+	background: @main-color;
+    border-radius: 20px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+#workspaces button:hover {
+    /*background: #48c0a3;*/
+	background: @main-color;
+    /*color: #cdd6f4;*/
+	color: @main-fg-alt;
+    border-radius: 20px;
+}
+
+/* 所有模块的基本设置 */
+#custom-launch_app,
+#workspaces,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#window,
+#custom-lock_screen,
+#custom-updates,
+#clock,
+#custom-notification,
+#custom-power_btn,
+#custom-reboot,
+#custom-logout,
+#tray,
+#network,
+#bluetooth,
+#battery,
+#power-profiles-daemon,
+#custom-power_profile,
+#pulseaudio,
+#custom-weather,
+#custom-myhyprv,
+#custom-light_dark,
+#backlight {
+    /*background: #e7e7ec;*/
+	background: @main-bg;
+    opacity: 0.8;
+    padding: 0px 7px;
+    margin-top: 5px;
+    border: 0px;
+}
+
+/* 单组模块的特别设置 */
+
+/* tofi及工作区 */
+#custom-launch_app {
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 10px;
+    color: @app-launcher;
+}
+#workspaces {
+	padding: 0px 3px 0px 3px;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 7px;
+}
+
+/* 硬件信息 */
+#cpu {
+    border-radius: 10px 0px 0px 10px;
+}
+#temperature {
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* 当前窗口 */
+#window {
+    border-radius: 10px;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+/* 打开的软件 */
+#tray {
+    border-radius: 10px;
+    margin-right: 7px;
+}
+
+/* bluetooth and wifi */
+#bluetooth {
+	border-radius: 10px 0px 0px 10px;
+}
+#network {
+	border-radius: 0px 10px 10px 0px;
+	padding-right: 10px;
+	margin-right: 7px;
+}
+
+
+/* 电池 */
+#battery {
+    border-radius: 10px 0px 0px 10px;
+    /*color: #1d7715;*/
+	color:	@battery-color;
+}
+#battery.warning {
+    color: #ffa631;
+}
+#battery.critical {
+    color: #f20c00;
+}
+#power-profiles-daemon {
+	border-radius: 0px 10px 10px 0px;
+	padding-right: 10px;
+	margin-right: 7px;
+}
+#power-profiles-daemon.power-saver {
+	color: #48c0a3;
+}
+#power-profiles-daemon.performance {
+	color: #ffa631;
+}
+
+
+/* 屏幕和声音 */
+#backlight {
+	border-radius: 10px 0px 0px 10px;
+}
+#pulseaudio {
+    color: #407cdd;
+}
+#pulseaudio.microphone {
+    color: #ad6bfd;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 7px;
+}
+
+/* 天气及剩余模块 */
+/* #custom-weather {
+    border-radius: 10px 0px 0px 10px;
+} */
+
+/* 时钟 */
+#clock {
+    border-radius: 10px 10px 10px 10px;
+	margin-right:	7px;
+}
+
+#custom-notification {
+	border-radius: 10px;
+	padding: 0px 7px 0px 14px;
+}
+
+
+/* #custom-light_dark {
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+} */
+
+/* 锁屏及关机 */
+#custom-lock_screen {
+    border-radius: 10px 0px 0px 10px;
+}
+#custom-power_btn {
+    border-radius: 0px 10px 10px 0px;
+	padding: 0px 10px 0px 6px;
+    margin-right: 10px;
+}

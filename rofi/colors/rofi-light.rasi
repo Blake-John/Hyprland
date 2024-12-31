@@ -1,0 +1,9 @@
+* {
+	main-bg:		#F1F1F1; // #F1F1F1
+	main-bg-alt:	#E0E0E0; // #E0E0E0
+	main-fg-alt:	#252525aa;
+	main-fg:		#000000; // #252525
+	main-color:	    #996A6777; // #008EC4
+	active:         #10A778; // #10A778
+	urgent:         #C30771; // #C30771
+}
