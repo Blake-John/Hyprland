@@ -1,4 +1,4 @@
 /* Import color-scheme from `colors` directory */
 
-@import "../colors/rofi-dark.rasi"
+@import "../colors/rofi-light.rasi"
 // @import "../colors/plain.rasi"

@@ -12,7 +12,7 @@ if [ $HYPRGAMEMODE = 1 ]; then
 fi
 # killall waybar
 # waybar >/dev/null 2>&1 &
-./toggle_waybar.sh
+~/.config/hypr/scripts/toggle_waybar.sh
 
 # Hyprland performance
 if [ $HYPRGAMEMODE = 1 ]; then

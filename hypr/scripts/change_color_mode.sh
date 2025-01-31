@@ -8,6 +8,7 @@ if [ -z "$(gsettings get org.gnome.desktop.interface color-scheme | grep light)"
 	gsettings set org.gnome.desktop.interface gtk-theme \'Graphite-Light\'
 	sed -i -E "s/gtk-theme-name=(.*?)/gtk-theme-name=Graphite-Light/" ~/.config/gtk-3.0/settings.ini
 	sed -i -E "s/gtk-application-prefer-dark-theme=(.)/gtk-application-prefer-dark-theme=0/" ~/.config/gtk-3.0/settings.ini
+	sed -i -E "s/gtk-icon-theme-name=(.*?)/gtk-icon-theme-name=Papirus/" ~/.config/gtk-3.0/settings.ini
 	sed -i -E "s/gtk-theme-name=(.*?)/gtk-theme-name=Graphite-Light/" ~/.config/gtk-4.0/settings.ini
 	sed -i -E "s/gtk-application-prefer-dark-theme=(.)/gtk-application-prefer-dark-theme=0/" ~/.config/gtk-4.0/settings.ini
 	
@@ -22,6 +23,7 @@ if [ -z "$(gsettings get org.gnome.desktop.interface color-scheme | grep light)"
 
 	# 设置 xsetting
 	sed -i -E "s/Net\/ThemeName \"Graphite-(.*?)\"/Net\/ThemeName \"Graphite-Light\"/" ~/.config/xsettingsd/xsettingsd.conf
+	sed -i -E "s/Net\/IconThemeName \"(.*?)\"/Net\/IconThemeName \"Papirus\"/" ~/.config/xsettingsd/xsettingsd.conf
 
 	# 设置 kitty
 	sed -i -E "s/include \.\/theme-(.*?)\.conf/include \.\/theme-light.conf/" ~/.config/kitty/kitty.conf
@@ -33,6 +35,7 @@ if [ -z "$(gsettings get org.gnome.desktop.interface color-scheme | grep light)"
 	if [ -e ~/.local/share/nwg-look/ ]; then
 		echo "Exist"
 		sed -i -E "s/gtk-theme=(.*?)/gtk-theme=Graphite-Light/" ~/.local/share/nwg-look/gsettings
+		sed -i -E "s/icon-theme=(.*?)/icon-theme=Papirus/" ~/.local/share/nwg-look/gsettings
 	else 
 		echo "Not Exist"
 	fi
@@ -45,6 +48,7 @@ else
 	gsettings set org.gnome.desktop.interface gtk-theme \'Graphite-Dark\'
 	sed -i -E "s/gtk-theme-name=(.*?)/gtk-theme-name=Graphite-Dark/" ~/.config/gtk-3.0/settings.ini
 	sed -i -E "s/gtk-application-prefer-dark-theme=(.)/gtk-application-prefer-dark-theme=1/" ~/.config/gtk-3.0/settings.ini
+	sed -i -E "s/gtk-icon-theme-name=(.*?)/gtk-icon-theme-name=Papirus/" ~/.config/gtk-3.0/settings.ini
 	sed -i -E "s/gtk-theme-name=(.*?)/gtk-theme-name=Graphite-Dark/" ~/.config/gtk-4.0/settings.ini
 	sed -i -E "s/gtk-application-prefer-dark-theme=(.)/gtk-application-prefer-dark-theme=1/" ~/.config/gtk-4.0/settings.ini
 
@@ -58,6 +62,7 @@ else
 
 	# 设置 xsetting
 	sed -i -E "s/Net\/ThemeName \"Graphite-(.*?)\"/Net\/ThemeName \"Graphite-Dark\"/" ~/.config/xsettingsd/xsettingsd.conf
+	sed -i -E "s/Net\/IconThemeName \"(.*?)\"/Net\/IconThemeName \"Papirus\"/" ~/.config/xsettingsd/xsettingsd.conf
 
 	# 设置 kitty
 	sed -i -E "s/include \.\/theme-(.*?)\.conf/include \.\/theme-dark.conf/" ~/.config/kitty/kitty.conf
@@ -69,6 +74,7 @@ else
 	if [ -e ~/.local/share/nwg-look/ ]; then
 		echo "Exist"
 		sed -i -E "s/gtk-theme=(.*?)/gtk-theme=Graphite-Dark/" ~/.local/share/nwg-look/gsettings
+		sed -i -E "s/icon-theme=(.*?)/icon-theme=Papirus/" ~/.local/share/nwg-look/gsettings
 	else 
 		echo "Not Exist"
 	fi

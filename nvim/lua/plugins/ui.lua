@@ -5,10 +5,10 @@ return {
 		"rktjmp/lush.nvim"
 	},
 	{
-		dir = "~/.config/nvim/lua/plugins/colorfulcode-dark/",
+		dir = "~/.config/nvim/lua/plugins/colorfulcode-light/",
 		lazy = false,
 		config = function ()
-			vim.cmd ("colorscheme colorfulcode-dark")
+			vim.cmd ("colorscheme colorfulcode-light")
 		end
 	},
 	-- {
