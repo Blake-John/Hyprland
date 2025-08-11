@@ -1,7 +1,7 @@
 {
 	// the config of the app-launch icon
     "custom/launch_app": {
-        "tooltip": false,
+        "tooltip": true,
         "tooltip-format": "Launch Apps",
 		"format": " ",
         // "on-click": "tofi-drun --drun-launch=true"
@@ -162,7 +162,16 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{calendar}</big>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#ff6699'><b>{}</b></span>",
+                "days": "<span color='#cdd6f4'><b>{}</b></span>",
+                "weekdays": "<span color='#7CD37C'><b>{}</b></span>",
+                "today": "<span color='#ffcc66'><b>{}</b></span>"
+            }
+        }
     },
 
 	"custom/notification": {

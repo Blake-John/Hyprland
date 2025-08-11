@@ -24,7 +24,8 @@ configuration {
 @import                          "shared/fonts.rasi"
 
 * {
-    // border-colour:               var(main-color);
+    border-colour:               var(main-color);
+    // main-color:                  var(main-color);
     handle-colour:               var(main-color);
     background-colour:           var(main-bg);
     foreground-colour:           var(main-fg);
