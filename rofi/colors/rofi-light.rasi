@@ -4,7 +4,7 @@
 	  main-bg-alt:	  #E0E0E0; // #E0E0E
 	  main-fg-alt:	  #252525aa;
 	  main-fg:		    #000000; // #252525
-	  main-color:	    #E6E6E677; // #008EC4
+	  main-color:	    #AEE1E277; // #008EC4
 	  active:         #10A778; // #10A778
 	  urgent:         #C30771; // #C30771
 }

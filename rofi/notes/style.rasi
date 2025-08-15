@@ -208,8 +208,8 @@ element normal.active {
     text-color:                  var(active-foreground);
 }
 element selected.normal {
-    background-color:            var(main-bg);
-    text-color:                  var(main-color);
+    background-color:            var(main-color);
+    text-color:                  var(main-fg);
 }
 element selected.urgent {
     background-color:            var(selected-urgent-background);

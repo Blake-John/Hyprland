@@ -115,13 +115,17 @@ element {
     orientation:                 vertical;
     expand:                      false;
     spacing:                     0px;
-    padding:                     5px 10px;
+    padding:                     10px 10px;
     border-radius:               26px;
     cursor:                      pointer;
     background-color:            @main-color;
-	text-color:					 @main-fg-alt;
+	  text-color:					         @main-fg-alt;
 }
 
+element normal {
+    background-color:            transparent;
+    text-color:                  @main-fg-alt;
+}
 
 element normal.normal {
     background-color:            transparent;
@@ -139,7 +143,7 @@ element normal.active {
 }
  
 element selected.normal {
-	text-color:						@main-fg;
+	text-color:						  @main-fg;
 	background-color:				#f3f9f1;
 	background-color:				#c2ccd0;
 	background-color:				#f2fdff;
@@ -164,17 +168,16 @@ element-icon {
     cursor:                      inherit;
     expand: false;
     padding:                     0px;
-	vertical-align:				 0.5;
-	horizontal-align:			 0.5;
+	  vertical-align:				 0.5;
+	  horizontal-align:			 0.5;
     background-color:            transparent;
-	text-color:					 @main-fg;
 }
 element-text {
     vertical-align:              0.5;
     horizontal-align:            0.5;
     cursor:                      inherit;
     background-color:            transparent;
-	text-color:					 inherit;
+	  text-color:					         inherit;
 }
 
 // Adapt rofi theme

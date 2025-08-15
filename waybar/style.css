@@ -48,8 +48,8 @@ tooltip label{
     /*background: #21a675;*/
 	background: @main-color;
     border-radius: 20px;
-/*     animation: ws_active 20s ease-in-out 1; */
-/*     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682); */
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
 #workspaces button:hover {
     /*background: #48c0a3;*/

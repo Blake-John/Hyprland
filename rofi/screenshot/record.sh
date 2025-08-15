@@ -3,8 +3,15 @@
 theme="$HOME/.config/rofi/screenshot/style.rasi"
 savepath="$HOME/Pictures/Screenshots/"
 
+if [[ ! -z $savepath ]]; then
+    mkdir -p $savepath
+fi
+
+# sink_device="$(pactl list sources | grep 'Name:' | grep "$(pactl info | grep 'Default Sink' | awk '{print $3}')" | awk '{print $2}')"
+# source_device="$(pactl list sources | grep 'Name:' | grep "$(pactl info | grep 'Default Source' | awk '{print $3}')" | awk '{print $2}')"
+
+source_device=$(pactl list sources | grep Name | grep input | awk '{print $2}')
 sink_device="$(pactl list sources | grep 'Name:' | grep "$(pactl info | grep 'Default Sink' | awk '{print $3}')" | awk '{print $2}')"
-source_device="$(pactl list sources | grep 'Name:' | grep "$(pactl info | grep 'Default Source' | awk '{print $3}')" | awk '{print $2}')"
 
 # Combine the two devices into one
 pactl unload-module module-null-sink
@@ -27,22 +34,22 @@ row=0
 # Parse the command line arguments
 while [[ $# -gt 0 ]]; do
     case "$1" in
-        --mic)
-            mic="$2"
-            shift
-            ;;
-        --desktop)
-            desktop="$2"
-            shift
-            ;;
-        --row)
-            row="$2"
-            shift
-            ;;
-        *)
-            echo "Unknown argument: $1"
-            exit 1
-            ;;
+    --mic)
+        mic="$2"
+        shift
+        ;;
+    --desktop)
+        desktop="$2"
+        shift
+        ;;
+    --row)
+        row="$2"
+        shift
+        ;;
+    *)
+        echo "Unknown argument: $1"
+        exit 1
+        ;;
     esac
     shift
 done
@@ -92,32 +99,32 @@ countdown() {
     # show_notification "¡Tiempo terminado!"
 }
 
-selected="$(echo -e "$options" | rofi -dmenu -mesg "  Recording" -theme ${theme} -selected-row $row )"
+selected="$(echo -e "$options" | rofi -dmenu -mesg "  Recording" -theme ${theme} -selected-row $row)"
 case $selected in
 $fullscreen)
-  countdown 3 "Fullscreen Recording"
-  wf-recorder -c libx264rgb --audio=$device -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
-	;;
+    countdown 3 "Fullscreen Recording"
+    wf-recorder -c libx264rgb --audio=$device -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
+    ;;
 $region)
-  area=$(slurp)
-  countdown 3 "Area Recording"
-  wf-recorder -g "$area" -c libx264rgb --audio=$device -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
-  ;;
+    area=$(slurp)
+    countdown 3 "Area Recording"
+    wf-recorder -g "$area" -c libx264rgb --audio=$device -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
+    ;;
 $micon)
-  if [ "$mic" = "true" ]; then
-    ~/.config/rofi/screenshot/toggle.sh --mic "false" --desktop "$desktop" --row 2
-  else
-    ~/.config/rofi/screenshot/toggle.sh --mic "true" --desktop "$desktop" --row 2
-  fi
-  ;;
+    if [ "$mic" = "true" ]; then
+        ~/.config/rofi/screenshot/toggle.sh --mic "false" --desktop "$desktop" --row 2
+    else
+        ~/.config/rofi/screenshot/toggle.sh --mic "true" --desktop "$desktop" --row 2
+    fi
+    ;;
 $deskon)
-  if [ "$desktop" = "true" ]; then
-    ~/.config/rofi/screenshot/toggle.sh --mic "$mic" --desktop "false" --row 3
-  else
-    ~/.config/rofi/screenshot/toggle.sh --mic "$mic" --desktop "true" --row 3
-  fi
-  ;;
+    if [ "$desktop" = "true" ]; then
+        ~/.config/rofi/screenshot/toggle.sh --mic "$mic" --desktop "false" --row 3
+    else
+        ~/.config/rofi/screenshot/toggle.sh --mic "$mic" --desktop "true" --row 3
+    fi
+    ;;
 $goback)
-  ~/.config/rofi/screenshot/screenshot.sh
-  ;;
+    ~/.config/rofi/screenshot/screenshot.sh
+    ;;
 esac
