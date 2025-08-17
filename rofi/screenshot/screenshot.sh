@@ -41,6 +41,6 @@ $option3)
     fi
     ;;
 $option4)
-    kitty ranger $savepath
+    kitty yazi $savepath
     ;;
 esac

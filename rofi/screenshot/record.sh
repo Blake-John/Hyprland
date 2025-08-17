@@ -102,13 +102,24 @@ countdown() {
 selected="$(echo -e "$options" | rofi -dmenu -mesg "  Recording" -theme ${theme} -selected-row $row)"
 case $selected in
 $fullscreen)
-    countdown 3 "Fullscreen Recording"
-    wf-recorder -c libx264rgb --audio=$device -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
+    if [[ $device == "none" ]]; then
+        countdown 3 "Fullscreen Recording"
+        wf-recorder -c libx264 -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
+    else
+        countdown 3 "Fullscreen Recording"
+        wf-recorder -c libx264 --audio=$device -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
+    fi
     ;;
 $region)
-    area=$(slurp)
-    countdown 3 "Area Recording"
-    wf-recorder -g "$area" -c libx264rgb --audio=$device -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
+    if [[ $device == "none" ]]; then
+        area=$(slurp)
+        countdown 3 "Area Recording"
+        wf-recorder -g "$area" -c libx264 -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
+    else
+        area=$(slurp)
+        countdown 3 "Area Recording"
+        wf-recorder -g "$area" -c libx264 --audio=$device -f "$savepath$(date +%Y-%m-%d-%H-%M-%S).mp4"
+    fi
     ;;
 $micon)
     if [ "$mic" = "true" ]; then
