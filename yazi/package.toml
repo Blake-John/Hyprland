@@ -1,27 +1,27 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "63b6c222bf2103b3023389dde5e2ecfe"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "de53d90"
-hash = "f10a14e823382d90fab5b3ee54cb38fe"
+rev = "d7588f6"
+hash = "e1de3054c0d1a2d8dc6f007eadc0fa31"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:zoom"
-rev = "de53d90"
+rev = "d7588f6"
 hash = "4a47a9cd4d8b3a963cb4cc593664b77e"
 
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
-rev = "1f3b3c7"
-hash = "16ea0ff3583131788d57d5f7d34d0f61"
+rev = "a0b1d9d"
+hash = "abfb0b2371259b2c8adfc7b617c3d7e5"
 
 [[flavor.deps]]
 use = "Chromium-3-Oxide/everforest-medium"
@@ -45,5 +45,5 @@ hash = "87265fb9bc07de76c0c9c916c84cc8b5"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "9cd2ac4"
-hash = "f54b45bdd33f607ddde47f0afad96142"
+rev = "3e6da98"
+hash = "deff42490f77b222e9d3a84dc16a76c5"

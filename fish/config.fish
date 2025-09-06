@@ -34,7 +34,6 @@ export EDITOR="nvim"
 
 alias ls "lsd --hyperlink auto -a"
 alias ll "lsd --hyperlink auto -ahl"
-alias cat bat
 alias mkdir "mkdir -p"
 alias cp "cp -r"
 alias .. "cd .."
