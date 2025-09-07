@@ -4,15 +4,15 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/miniconda3/bin/conda
-    eval /opt/miniconda3/bin/conda "shell.fish" hook $argv | source
-else
-    if test -f /opt/miniconda3/etc/fish/conf.d/conda.fish
-        . /opt/miniconda3/etc/fish/conf.d/conda.fish
-    else
-        set -x PATH /opt/miniconda3/bin $PATH
-    end
-end
+# if test -f /opt/miniconda3/bin/conda
+#     eval /opt/miniconda3/bin/conda "shell.fish" hook $argv | source
+# else
+#     if test -f /opt/miniconda3/etc/fish/conf.d/conda.fish
+#         . /opt/miniconda3/etc/fish/conf.d/conda.fish
+#     else
+#         set -x PATH /opt/miniconda3/bin $PATH
+#     end
+# end
 # <<< conda initialize <<<
 
 function y
@@ -46,5 +46,5 @@ set -x PATH /home/blake/.cargo/bin/ $PATH
 
 starship init fish | source
 set -gx PATH $HOME/.npm-global/bin $PATH
-set -Ux OPENAI_API_KEY sk-958a83e9f9184c86624056e16f37a51e
-set -Ux AVANTE_OPENAI_API_KEY sk-958a83e9f9184c86624056e16f37a51e
+set -x OPENAI_API_KEY sk-958a83e9f9184c86624056e16f37a51e
+set -x AVANTE_OPENAI_API_KEY sk-958a83e9f9184c86624056e16f37a51e

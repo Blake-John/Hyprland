@@ -2,9 +2,11 @@
 
 dest=$1
 
-if wl-paste -t image/png >/dev/null 2>&1; then
+if wl-paste -t image/png > /dev/null 2>&1; then
     filename="$(date +%Y%m%d-%H%M%S).png"
-    wl-paste -t image/png >"$dest/$filename"
+    wl-paste -t image/png > "$dest/$filename"
+elif wl-paste -t image/jpg > /dev/null 2>&1; then
+    filename="$(date +%Y%m%d-%H%M%S).jpg"
 else
     files=$(wl-paste -t text/plain)
     # echo $files
