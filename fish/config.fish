@@ -44,7 +44,7 @@ export SUPERPOWERSAVE=1
 
 set -x PATH /home/blake/.cargo/bin/ $PATH
 
-starship init fish | source
 set -gx PATH $HOME/.npm-global/bin $PATH
 set -x OPENAI_API_KEY sk-958a83e9f9184c86624056e16f37a51e
 set -x AVANTE_OPENAI_API_KEY sk-958a83e9f9184c86624056e16f37a51e
+starship init fish | source

@@ -11,7 +11,7 @@
     main-bg-alt:    #282b31;
     main-fg:        #FFFFFF;
 	  main-fg-alt:	  #C0CAF5;
-    main-color:	    #7595CE77;
+    main-color:	    #6C6D7077;
     active:         #414868;
     urgent:         #F7768E;
 }

@@ -9,7 +9,7 @@
 
 # Use custom format
 format = '''
-╭─ $os$directory$git_branch$git_commit$git_state$git_metrics$git_status$c$cmake$lua$python$conda$container$cmd_duration$status
+╭─ $os$directory$git_branch$git_commit$git_state$git_metrics$git_status$package$bun$c$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$gleam$golang$gradle$haskell$haxe$helm$java$julia$kotlin$lua$mojo$nim$nodejs$ocaml$odin$opa$perl$php$pulumi$purescript$python$quarto$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$typst$vlang$vagrant$zig$buf$guix_shell$nix_shell$conda$meson$container$cmd_duration$status
 ╰─$character
 '''
 
