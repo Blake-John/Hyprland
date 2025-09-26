@@ -5,6 +5,6 @@ killall xdg-desktop-portal-wlr
 killall xdg-desktop-portal
 killall xdg-desktop-portal-gtk
 sleep 1
-/usr/lib/xdg-desktop-portal-hyprland &
+/usr/lib/xdg-desktop-portal-gnome &
 sleep 2
 /usr/lib/xdg-desktop-portal &
