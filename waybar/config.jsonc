@@ -8,8 +8,10 @@
 	"modules-left": [
 		"custom/launch_app",
 		"hyprland/workspaces",
+        "niri/workspaces",
 		"cpu", "memory", "disk", "temperature",
-		"hyprland/window"
+		"hyprland/window",
+        "niri/window"
 	],
 	"modules-center": ["clock", "custom/notification"],
 	"modules-right": [
