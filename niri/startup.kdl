@@ -1,0 +1,12 @@
+spawn-at-startup "waybar"
+spawn-at-startup "fcitx5"
+spawn-at-startup "swww-daemon"
+// spawn-at-startup "quickshell"
+
+
+spawn-sh-at-startup "wlsunset -t 6000 -T 6500"
+spawn-sh-at-startup "brightnessctl set 480"
+
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+
