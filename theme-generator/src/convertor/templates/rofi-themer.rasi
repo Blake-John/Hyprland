@@ -1,0 +1,10 @@
+* {
+    background: {{ background }}ff;
+    background-alt: {{ surfaceContainer }}ff;
+    foreground: {{ onBackground }}ff;
+    border: {{ outline }}ff;
+    selected: {{ primaryContainer }}ff;
+    selected-foreground: {{ onPrimaryContainer }}ff;
+    active: {{ tertiary }}ff;
+    urgent: {{ error }}ff;
+}

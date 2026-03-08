@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-result=$(cliphist list | rofi -dmenu)
+result=$(cliphist list | rofi -dmenu -theme ~/.config/rofi/emoji/style.rasi)
 
 if [[ $result == *file://* ]]; then
     decoded=$(cliphist decode $result)

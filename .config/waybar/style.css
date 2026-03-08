@@ -5,7 +5,7 @@
     border: none;
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 14px;
     min-height: 0;
 }
@@ -15,47 +15,56 @@ window#waybar {
     /*background: rgba(21, 18, 27, 0);*/
 	background: transparent;
     /*color: #2b2b2c;*/
-	color:	@main-fg;
+	/* color:	@main-fg; */
+    color: @onBackground;
 }
 
 /* 提示框的设置 */
 tooltip {
-    background: @main-bg;
+    /* background: @main-bg; */
+    background: @background;
     opacity: 0.8;
     border-radius: 10px;
     border-width: 1.5px;
     border-style: solid;
     /*border-color: #424c50;*/
-	border-color: @main-border;
+	/* border-color: @main-border; */
+    border-color: @onSurface;
 }
 tooltip label{
     /*color: #2b2b2c;*/
-	color:	@main-fg;
+	/* color:	@main-fg; */
+    color: @onBackground;
 }
 
 /* workspace按钮设置 */
 #workspaces button {
 	padding: 1px 5px 1px 5px;
     /*color: #313244;*/
-	color: @main-fg;
-    margin: 0px 1px;
+	/* color: @main-fg; */
+    color: @onBackground;
+    /* margin: 0px 1px; */
     /* padding: 0px; */
 }
 #workspaces button.active {
     /*color: #dbe2f7;*/
 	/*color: #313244;*/
-	color: @main-fg;
+	/* color: @main-fg; */
+    color: @onBackground;
     /*background: #21a675;*/
-	background: @main-color;
+	/* background: @main-color; */
+    background: @primaryContainer;
     border-radius: 20px;
     animation: ws_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
 #workspaces button:hover {
     /*background: #48c0a3;*/
-	background: @main-color;
+	/* background: @main-color; */
+    background: @secondaryContainer;
     /*color: #cdd6f4;*/
-	color: @main-fg-alt;
+	/* color: @main-fg-alt; */
+    color: @onSecondaryContainer;
     border-radius: 20px;
 }
 
@@ -86,7 +95,8 @@ tooltip label{
 #custom-light_dark,
 #backlight {
     /*background: #e7e7ec;*/
-	background: @main-bg;
+	/* background: @main-bg; */
+    background: @background;
     opacity: 0.8;
     padding: 0px 7px;
     margin-top: 5px;
@@ -99,7 +109,7 @@ tooltip label{
 #custom-launch_app {
     border-radius: 10px 0px 0px 10px;
     margin-left: 10px;
-    color: @app-launcher;
+    color: @tertiary;
 }
 #workspaces {
 	padding: 0px 3px 0px 3px;
@@ -144,8 +154,8 @@ tooltip label{
     /*border-radius: 10px 0px 0px 10px;*/
 	border-radius: 10px;
 	margin-right: 7px;
-    /*color: #1d7715;*/
-	color:	@battery-color;
+    color: #1d7715;
+	/* color:	@battery-color; */
 }
 #battery.warning {
     color: #ffa631;
