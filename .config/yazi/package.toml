@@ -1,37 +1,37 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "d7588f6"
-hash = "3996fc74044bc44144b323686f887e1"
+rev = "1962818"
+hash = "6fa6a05a81c98dd000fbca3cca6e9682"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "d7588f6"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "1962818"
+hash = "126a014a2de2f0acd20316d190c640eb"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "d7588f6"
-hash = "e1de3054c0d1a2d8dc6f007eadc0fa31"
+rev = "1962818"
+hash = "241e2ac9909f39c93474621d169b08c2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:zoom"
-rev = "d7588f6"
-hash = "4a47a9cd4d8b3a963cb4cc593664b77e"
+rev = "1962818"
+hash = "fa268cb59989a87780605fdcfb8d99a9"
 
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
-rev = "a0b1d9d"
-hash = "abfb0b2371259b2c8adfc7b617c3d7e5"
+rev = "04985d1"
+hash = "8fab444fdbdecadb16422fc0a566fd22"
 
 [[flavor.deps]]
 use = "Chromium-3-Oxide/everforest-medium"
-rev = "0158f0f"
-hash = "dbbbfe681e156c28303efb1f44b6cbc4"
+rev = "5f9200c"
+hash = "299daede97569a9b4b5b3814a1799be8"
 
 [[flavor.deps]]
 use = "gosxrgxx/flexoki-dark"
-rev = "28e1977"
-hash = "9dbbb64ea20f9f1271c31951dea55c7b"
+rev = "25d28ce"
+hash = "c49ba4a7cb1dd8924ea82e21d7daabab"
 
 [[flavor.deps]]
 use = "956MB/vscode-dark-modern"
@@ -45,5 +45,5 @@ hash = "87265fb9bc07de76c0c9c916c84cc8b5"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "3e6da98"
-hash = "deff42490f77b222e9d3a84dc16a76c5"
+rev = "9511cb0"
+hash = "9f49a591c5a86578da7000b1816329c1"
