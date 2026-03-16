@@ -4,8 +4,13 @@ linemode = "filesize_dircount"
 show_symlink = true
 
 [[plugin.prepend_fetchers]]
-id = "git"
-name = "*"
+id  = "git"
+url = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id  = "git"
+url = "*/"
 run = "git"
 
 [opener]
