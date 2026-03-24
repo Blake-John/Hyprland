@@ -6,17 +6,12 @@ SETUVAR F_DATA:/home/blake/\x2elocal/share/f/data
 SETUVAR F_DATA_DIR:/home/blake/\x2elocal/share/f
 SETUVAR F_EXCLUDE:\x5e/tmp/\x2e\x2b
 SETUVAR --export OPENAI_API_KEY:sk\x2d958a83e9f9184c86624056e16f37a51e
-SETUVAR ZO_CMD:zo
-SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/home/blake/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/blake/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:\x5e/home/blake\x24
 SETUVAR __fish_initialized:4300
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_gokulsoumya_2F_f_files:\x7e/\x2econfig/fish/functions/__f\x2efish\x1e\x7e/\x2econfig/fish/functions/__f_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__f_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__f_complete\x2efish\x1e\x7e/\x2econfig/fish/functions/__f_extract_paths\x2efish\x1e\x7e/\x2econfig/fish/functions/__f_insert_from_picker\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/f\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/f_key_bindings\x2efish
-SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_complete\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1egokulsoumya/f\x1eedc/bass\x1ejethrokuan/z
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1egokulsoumya/f\x1eedc/bass
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_greeting:Welcome\x2c\x20Blake\x20John\x20\x21
 SETUVAR fish_user_paths:/home/blake/\x2emodular/bin

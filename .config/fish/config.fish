@@ -15,14 +15,14 @@ end
 # end
 # <<< conda initialize <<<
 
-function y
-    set tmp (mktemp -t "yazi-cwd.XXXXXX")
-    yazi $argv --cwd-file="$tmp"
-    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        builtin cd -- "$cwd"
-    end
-    rm -f -- "$tmp"
-end
+# function y
+#     set tmp (mktemp -t "yazi-cwd.XXXXXX")
+#     yazi $argv --cwd-file="$tmp"
+#     if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+#         builtin cd -- "$cwd"
+#     end
+#     rm -f -- "$tmp"
+# end
 
 export TESSDATA_PREFIX="$HOME/tessdata/"
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
@@ -37,6 +37,8 @@ alias ll "lsd --hyperlink auto -ahl"
 alias mkdir "mkdir -p"
 alias cp "cp -r"
 alias .. "cd .."
+alias .... "cd ../.."
+alias ...... "cd ../../.."
 alias cr "cargo run"
 alias cb "cargo build"
 alias vf "$EDITOR ~/.config/fish/config.fish"
@@ -45,5 +47,9 @@ alias sf "source ~/.config/fish/config.fish"
 export SUPERPOWERSAVE=1
 
 set -x PATH /home/blake/.cargo/bin/ $PATH
+set -x PATH /home/blake/.npm-global/bin $PATH
+
+source /home/blake/.context7_api.fish
 
 starship init fish | source
+zoxide init fish | source
