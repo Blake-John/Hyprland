@@ -108,7 +108,7 @@ rm $sys_config*
 cp $config_dir* $sys_config
 
 ## link config applications
-ln -sf ~/.config/theme/kitty_themer.conf ~/.config/kitty/themes/kitty_themer.conf
+ln -sf ~/.config/theme/kitty-themer.conf ~/.config/kitty/themes/kitty-themer.conf
 
 ## refresh system to apply config
 ~/.config/hypr/scripts/refresh.sh
