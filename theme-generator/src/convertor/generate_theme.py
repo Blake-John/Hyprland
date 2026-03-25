@@ -15,7 +15,7 @@ def load_template(path):
 
 def render_template(template, colors, template_path=None):
     pattern = re.compile(r"\{\{\s*(\w+)\s*\}\}")
-    strip_hash = template_path and "hypr-themer.conf" in template_path
+    strip_hash = template_path and "hypr_themer.conf" in template_path
 
     def replace(match):
         key = match.group(1)

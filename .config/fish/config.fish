@@ -24,6 +24,52 @@ end
 #     rm -f -- "$tmp"
 # end
 
+function fpi
+    set selected (paru -Sl | fzf \
+                  --multi \
+                  --border=rounded \
+                  --prompt="🔍 Install > " \
+                  --preview 'paru -Si {2}' \
+                  --preview-window=right:60%)
+    if test -z "$selected"
+        echo "No Package Selected !"
+        return
+    end
+
+    echo -e "📦 Package $selected will be installed ..."
+    paru -S --needed $selected
+end
+
+function fps
+    set selected (paru -Sl | fzf \
+                  --multi \
+                  --border=rounded \
+                  --prompt="🔍 Search > " \
+                  --preview 'paru -Si {2}' \
+                  --preview-window=right:60%)
+end
+
+function fpr
+    set selected (paru -Q | fzf \
+                  --multi \
+                  --border=rounded \
+                  --prompt="🔍 Remove > " \
+                  --preview 'paru -Qi {2}' \
+                  --preview-window=right:60%)
+    if test -z "$selected"
+        echo "No Package Selected !"
+        return
+    end
+
+    echo -e "📦 Package $selected will be remove ..."
+    paru -Rs --needed $selected
+
+end
+
+alias pu "paru -Sy"
+alias puu "paru -Syuu"
+alias paremove "paru -Rns (paru -Qtdq)"
+
 export TESSDATA_PREFIX="$HOME/tessdata/"
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 export QT_QPA_PLATFORMTHEME=qt6ct
@@ -43,6 +89,7 @@ alias cr "cargo run"
 alias cb "cargo build"
 alias vf "$EDITOR ~/.config/fish/config.fish"
 alias sf "source ~/.config/fish/config.fish"
+alias y yazi
 
 export SUPERPOWERSAVE=1
 

@@ -16,11 +16,11 @@ fi
 
 if [[ $target_wallpaper == *.png || $target_wallpaper == *.jpg || $target_wallpaper == *.jpeg || $target_wallpaper == *.gif ]]; then
     echo "normal picture"
-    if ! command -v swww >/dev/null 2>&1; then
-        notify-send "swww does not exist, installing ..."
-        sudo pacman -S swww
+    if ! command -v awww >/dev/null 2>&1; then
+        notify-send "awww does not exist, installing ..."
+        sudo pacman -S awww
     fi
-    swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration 1 --transition-step 255 --transition-fps 60 "$target_wallpaper" &
+    awww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration 1 --transition-step 255 --transition-fps 60 "$target_wallpaper" &
 
 elif [[ $target_wallpaper == *.mp4 ]]; then
     echo "mp4 video"
@@ -108,7 +108,7 @@ rm $sys_config*
 cp $config_dir* $sys_config
 
 ## link config applications
-ln -sf ~/.config/theme/kitty-themer.conf ~/.config/kitty/themes/kitty-themer.conf
+ln -sf ~/.config/theme/kitty_themer.conf ~/.config/kitty/themes/kitty_themer.conf
 
 ## refresh system to apply config
 ~/.config/hypr/scripts/refresh.sh

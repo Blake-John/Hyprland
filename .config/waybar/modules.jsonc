@@ -296,6 +296,70 @@
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click-right": "~/.config/rofi/bluetooth/bluetooth.sh"
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+        "format-disconnected": "Disconnected ",
+        // "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon} ",
+        "interval": 10,
+        "consume-icons": {
+            "on": " " // Icon shows only when "consume" is on
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)",
+        "on-click": "mpc toggle",
+        "on-click-right": "mpc stop",
+        "on-scroll-up": "mpc next",
+        "on-scroll-down": "mpc prev"
+    },
+    // "mpris": {
+    //     "format": "DEFAULT: {player_icon} {dynamic}",
+    //     "format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+    //     "player-icons": {
+    //         "default": "▶",
+    //         "mpv": "🎵"
+    //     },
+    //     "status-icons": {
+    //         "paused": "⏸"
+    //     },
+    //     // "ignored-players": ["firefox"]
+    // }
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}<i>",
+        "player-icons": {
+            "default": "🎵",
+            "musicfox": "☁️" // 专门为 musicfox 设置图标
+        },
+        "status-icons": {
+            "playing": "▶",
+            "paused": "⏸",
+            "stopped": "⏹"
+        },
+        "max-length": 20, // 限制长度，防止撑爆栏
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl prev",
+        "tooltip": true,
+        "tooltip-format": "{title} - {artist} - {album} - {position}",
+        "ignored-players": ["firefox"],
+        "interval": 1,
+        "dynamic-order": ["title", "artist"]
     }
     // "bluetooth": {
     //     "format": " {status}",

@@ -13,7 +13,12 @@
 		"hyprland/window"
         // "niri/window"
 	],
-	"modules-center": ["clock", "custom/notification"],
+	"modules-center": [
+        // "mpd", 
+        "mpris", 
+        "clock", 
+        "custom/notification"
+    ],
 	"modules-right": [
 		"tray",
 		"bluetooth",

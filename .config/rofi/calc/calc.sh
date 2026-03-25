@@ -2,4 +2,4 @@
 
 theme=~/.config/rofi/calc/style.rasi
 
-rofi -show calc -modi calc -theme ~/.config/rofi/calc/style.rasi -no-show-match -no-sort -calc-command "echo -n '{result}' | wl-copy"
+rofi -show calc -modi calc -no-show-match -no-sort -theme $theme -calc-command "echo -n '{result}' | wl-copy"

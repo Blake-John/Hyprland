@@ -93,6 +93,8 @@ tooltip label{
 #custom-weather,
 #custom-myhyprv,
 #custom-light_dark,
+#mpd,
+#mpris,
 #backlight {
     /*background: #e7e7ec;*/
 	/* background: @main-bg; */
@@ -130,6 +132,17 @@ tooltip label{
     border-radius: 10px;
     margin-right: 7px;
     margin-left: 7px;
+}
+
+/* mpd */
+#mpd {
+    border-radius: 10px;
+    margin-right: 7px;
+}
+/* mpris */
+#mpris {
+    border-radius: 10px;
+    margin-right: 7px;
 }
 
 /* 打开的软件 */
