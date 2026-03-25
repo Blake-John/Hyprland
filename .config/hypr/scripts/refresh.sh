@@ -10,4 +10,5 @@ waybar >/dev/null 2>&1 &
 sleep 0.01
 swaync >/dev/null 2>&1 &
 
-kitty +kitten themes --reload-in=all kitty_themer
+kitty +kitten themes --reload-in=all kitty-themer
+hyprctl reload
