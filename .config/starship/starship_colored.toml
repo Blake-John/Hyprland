@@ -13,7 +13,7 @@ add_newline = false
 # $character
 # """
 format = '''
-$cmd_duration 󰜥 $directory $git_branch$git_commit$git_status$git_state $python $rust $c
+$cmd_duration 󰜥 $directory $git_branch$git_commit$git_status$git_state$python$conda$rust$c
 $character
 '''
 
@@ -37,6 +37,9 @@ version_format = "v${raw}"
 symbol = "🐍 "
 style = "yellow bold"
 format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
+
+[conda]
+format = '[$symbol$environment](green)'
 
 [rust]
 symbol = '🦀 '
