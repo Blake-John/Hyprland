@@ -23,6 +23,10 @@
 
 window-padding-x = 10
 window-padding-y = 10
+window-decoration = auto
+gtk-titlebar = false
+window-height = 25
+window-width = 100
 
 copy-on-select = clipboard
 clipboard-write = allow
