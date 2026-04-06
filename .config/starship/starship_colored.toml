@@ -36,14 +36,14 @@ error_symbol = "[   ](bold fg:red)"
 version_format = "v${raw}"
 symbol = "🐍 "
 style = "yellow bold"
-format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
 
 [conda]
-format = '[$symbol$environment](green)'
+format = '[$symbol$environment ](green)'
 
 [rust]
 symbol = '🦀 '
-format = '[$symbol($version)]($style)'
+format = '[$symbol($version) ]($style)'
 
 [c]
 format = "[$symbol($version(-$name) )]($style)"
@@ -103,9 +103,9 @@ cherry_pick = "[🍒 PICKING](bold red)"
 # deleted = " 🗑 "
 #
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([\[ $all_status$ahead_behind\]]($style) )'
 style = "red bold"
-stashed = '\$'
+stashed = '\$ '
 ahead = "⇡"
 behind = "⇣"
 up_to_date = ""
