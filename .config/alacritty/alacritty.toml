@@ -1,0 +1,37 @@
+[window]
+dimensions = {columns = 100, lines = 25}
+decorations = "None"
+padding = {x = 10, y = 10}
+
+[general]
+live_config_reload = true
+
+[terminal]
+osc52 = "CopyPaste"
+
+[scrolling]
+history = 99999
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetBrainsMonoNerdFont"
+
+[env]
+TERM = "xterm-256color"
+
+[colors.primary]
+background = "#2c2d30"
+
+[selection]
+save_to_clipboard = true
+
+[keyboard]
+bindings = [
+  {key = "u", mods = "Alt|Control", action = "ScrollPageUp"},
+  {key = "d", mods = "Alt|Control", action = "ScrollPageDown"},
+  {key = "k", mods = "Alt|Control", action = "ScrollLineUp"},
+  {key = "j", mods = "Alt|Control", action = "ScrollLineDown"},
+  {key = "v", mods = "Control|Alt", action = "ToggleViMode"},
+]

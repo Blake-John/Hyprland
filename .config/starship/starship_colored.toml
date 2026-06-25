@@ -19,7 +19,7 @@ $character
 
 right_format = "$username$hostname $time"
 continuation_prompt = "[∙](bright-black) "
-scan_timeout = 30
+scan_timeout = 300
 command_timeout = 1000
 follow_symlinks = true
 

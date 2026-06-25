@@ -11,11 +11,13 @@ max_height = 2000
 id  = "git"
 url = "*"
 run = "git"
+group = "git"
 
 [[plugin.prepend_fetchers]]
 id  = "git"
 url = "*/"
 run = "git"
+group = "git"
 
 [[plugin.prepend_previewers]]
 mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}"
